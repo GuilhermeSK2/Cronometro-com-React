@@ -25,7 +25,7 @@ function Cronometro() {
         setSegundos((segundos) => segundos + 1); 
 
       }, 1000); 
-
+      
     } else { 
 
       clearInterval(intervalo); 
@@ -92,37 +92,39 @@ function Cronometro() {
 
   return ( 
 
-    <div id='container'> 
+    <div className='content'>
+      <div id='container'> 
 
-      <h2>Cronômetro</h2> 
+<h2>Cronômetro</h2> 
 
-      <div> 
+<div> 
 
-        <span>{horas < 10 ? `0${horas}` : horas}</span> : 
+  <span>{horas < 10 ? `0${horas}` : horas}</span> : 
 
-        <span>{minutos < 10 ? `0${minutos}` : minutos}</span> : 
+  <span>{minutos < 10 ? `0${minutos}` : minutos}</span> : 
 
-        <span>{segundos < 10 ? `0${segundos}` : segundos}</span> 
+  <span>{segundos < 10 ? `0${segundos}` : segundos}</span> 
 
-      </div> 
+</div> 
 
-      <div id='botoes'> 
+<div id='botoes'> 
 
-        {!iniciado ? ( 
+  {!iniciado ? ( 
 
-          <button onClick={iniciarCronometro}>Iniciar</button> 
+    <button onClick={iniciarCronometro}>Iniciar</button> 
 
-        ) : ( 
+  ) : ( 
 
-          <button onClick={pausarCronometro}>Pausar</button> 
+    <button onClick={pausarCronometro}>Pausar</button> 
 
-        )} 
+  )} 
 
-        <button onClick={zerarCronometro}>Zerar</button> 
+  <button onClick={zerarCronometro}>Zerar</button> 
 
-      </div> 
+</div> 
 
-    </div> 
+</div> 
+    </div>
 
   ); 
 
